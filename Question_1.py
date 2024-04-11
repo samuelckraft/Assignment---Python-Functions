@@ -1,23 +1,26 @@
 #Task 1 & 2
-def add():
+def add(n1):
     global numbers
-    variables = sum(numbers)
+    variables = sum(n1)
     print(f"The sum is: {variables}")
     
-def subtract():
+def subtract(n1, n2):
     global numbers
     for x in numbers:
-        minus = numbers[x] - numbers[x+1]
+        minus = numbers[0] - numbers[1]
+    print(f"The difference is: {minus}")
 
-def multiply():
+def multiply(n1, n2):
     global numbers
     for x in numbers:
-        product = numbers[x] * numbers[x+1]
+        product = numbers[0] * numbers[1]
+    print(f"The product is: {product}")
 
-def divide():
+def divide(n1, n2):
     global numbers
     for x in numbers:
-        quotient = numbers[x] / numbers[x+1]
+        quotient = numbers[0] / numbers[1]
+    print(f"The quotient is: {quotient}")
     
 
 numbers = []
@@ -37,6 +40,26 @@ def calculator():
             numbers.append(variable1)
             numbers.append(variable2)
             return add(numbers)
-            break
 
+        elif choice == "2":
+            variable1 = int(input("Input Number 1: "))
+            variable2 = int(input("Input Number 2: "))
+            numbers.append(variable1)
+            numbers.append(variable2)
+            return subtract(variable1, variable2)
+        elif choice == "3":
+            variable1 = int(input("Input Number 1: "))
+            variable2 = int(input("Input Number 2: "))
+            numbers.append(variable1)
+            numbers.append(variable2)
+            return multiply(variable1, variable2)
+        elif choice == "4":
+            variable1 = int(input("Input Number 1: "))
+            variable2 = int(input("Input Number 2: "))
+            numbers.append(variable1)
+            numbers.append(variable2)
+            return divide(variable1, variable2)
+        else:
+            print("Invalid response, please try again")
 
+calculator()
