@@ -22,8 +22,32 @@ print(f"Lowest grade in the class: {min_grade()}")
 
 #Task 3
 def letter_grades():
+    global students
+    global grades
     for x in grades:
-        if x < 50:
-            print(f"{students[len[x]]} has an f")
+        if x < 60:
+            f_index = grades.index(x)
+            grades.remove(x)
+            grades.insert(f_index, "F")
+        elif 61 < x < 70:
+            d_index = grades.index(x)
+            grades.remove(x)
+            grades.insert(d_index, "D")
+        elif 71 < x < 80:
+            c_index = grades.index(x)
+            grades.remove(x)
+            grades.insert(c_index, "C")
+        elif 81 < x < 90:
+            b_index = grades.index(x)
+            grades.remove(x)
+            grades.insert(b_index, "B")
+        elif 91 < x < 100:
+            a_index = grades.index(x)
+            grades.remove(x)
+            grades.insert(a_index, "A")
+        else:
+            print("Invalid grade please enter another")
+    
+    print(grades)
 
 print(letter_grades())
