@@ -17,7 +17,7 @@ def daily_exercise():
         if choice == "1":
             activities.append(input("What activity did you do today? "))
             calories.append(int(input("How many calories does that burn per minute? ")))
-            time_spent.append(int(input("How long did you do it for? ")))
+            time_spent.append(int(input("How many minutes did you do it for? ")))
         elif choice == "2":
             calories_burned = sum(list(map(operator.mul, calories, time_spent)))
             print(f"Calories burned: {calories_burned}")

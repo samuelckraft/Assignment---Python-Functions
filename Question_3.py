@@ -21,10 +21,8 @@ def min_grade():
 print(f"Lowest grade in the class: {min_grade()}")
 
 #Task 3
-def letter_grades():
-    global students
-    global grades
-    for x in grades:
+def letter_grades(grades): #use a variable to make it reusable
+    for x in grades:#sort vs sorted - sorted creates new list in place of "x"
         if x < 60:
             f_index = grades.index(x)
             grades.remove(x)
@@ -50,4 +48,4 @@ def letter_grades():
     
     print(grades)
 
-print(letter_grades())
+print(letter_grades(grades))

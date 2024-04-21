@@ -11,7 +11,7 @@ def grocery_list():
 
         if choice == "1":
             print("Current List: ")
-            for x in shopping_list:
+            for x in shopping_list: #stop using x be more descriptive
                 print(x)
         elif choice == "2":
             new_item = input("Enter the name of the new product: ")
